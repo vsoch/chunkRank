@@ -17,7 +17,7 @@ Calculates an accuracy for a ranked list of binary, monotonic groupings, "chunks
 \examples{
 ### group assignment lookup [order doesn't matter, will be sorted increasing]
 lookup = c(1,2,1,2,1,1,2,2,2,2,2,2,1,2,2,1)
-names(lookup) = paste("n1",seq(1,length(ideal)),sep="")
+names(lookup) = paste("n1",seq(1,length(lookup)),sep="")
 
 ### The predicted order
 predicted = sample(names(lookup),length(lookup))
