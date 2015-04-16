@@ -26,17 +26,17 @@
 
 ### Arguments:
 
- - lookup: A vector of ints, with each int corresponding to the actual group 
+ - **lookup**: A vector of ints, with each int corresponding to the actual group 
           assignment, and names(lookup) corresponding the unique id. If gold standard 
           "ideal" is not provided, this variable will be sorted to derive the "ideal" 
           gold standard [eg, 1 1 1 1 2 2 2 2... N]
 
- - predicted: The predicted ordering, all labels in predicted must be present in 
+ - **predicted**: The predicted ordering, all labels in predicted must be present in 
               lookup, and lengths must be equal
 
- - ideal: The ideal gold standard ordering, increasing [eg, 1 1 1 1 2 2 2 2.. N]
+ - **ideal**: The ideal gold standard ordering, increasing [eg, 1 1 1 1 2 2 2 2.. N]
 
- - cutoff: The cutoff position for giving partial accuracy. This can be the number of  
+ - **cutoff**: The cutoff position for giving partial accuracy. This can be the number of  
           images returned in the first pagination of an image search, the size of the 
           first group (no partial accuracy given), or the length of the list (partial
           accuracy given for all) [default = 100] Cases not included in the accuracy 
@@ -45,13 +45,13 @@
 
 ### Value:
 
- - accuracy: a list of accuracy values for each group, indexed by group id
+ - **accuracy**: a list of accuracy values for each group, indexed by group id
 
- - table: includes percent and absolute distances off, classification [correct/
+ - **table**: includes percent and absolute distances off, classification [correct/
           incorrect], predicted, and actual labels. Values of "NA" indicate element 
           was after cutoff, and not used in accuracy calculation.
 
- - cutoff: the cutoff for giving partial accuracy
+ - **cutoff**: the cutoff for giving partial accuracy
 
 
 ### Example:
